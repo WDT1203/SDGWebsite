@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life on land - Home</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>    
+
+    <div class="header">
+
+        <div class="logoWrapper">
+        <img src="img/logo2.jfif" alt="logo" class="logo">
+        <p>"Making the earth greener than yesterday"</p>
+        </div>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="home.html" class="link active">HOME</a></li>
+                <li><a href="gallery.html" class="link">GALLERY</a></li>
+                <li><a href="shop.html" class="link">SHOP</a></li>
+                <li><a href="#" class="link">PROFILE</a></li>
+                <li><a href="#" class="link">ABOUT US</a></li>
+                <li><a href="#" class="link">SITEMAP</a></li>
+            </ul>
+        </nav>
+
+    </div>
+
+    <div class="wlcmTxt">
+        <h1>Making the earth GREENER <br> than yesterday</h1>
+        <p>At Life on Land, we're dedicated to promoting 
+            environmental sustainability 
+            <br>and making a positive impact on the planet. <br>
+             Explore our site to learn about Eco-friendly practices
+             <br>Discover sustainable products 
+             <br> Join us in our mission to create a greener
+             <br>healthier world for future 
+             generations.</p>
+    
+    </div>
+
+    <div class="content">
+        <a href="content_1.html" class="content_1">
+            <div class="cont_img">
+                <img src="img/forest2.jpg" alt="">
+            </div>
+            <div>
+            <h2>Forest and Carbon Storage</h2>
+            <p>Healthy forests act as carbon sinks, absorbing and storing carbon dioxide, a major greenhouse gas contributing to climate change. Deforestation, linked to unsustainable land use, releases this stored carbon back into the atmosphere. Reducing your carbon footprint helps protect these forests.</p>
+            </div>
+        </a>
+
+        <a href="content_2.html" class="content_2">
+            <div>
+                <h2>Mountain Forests</h2>
+                <p>Mountain forests are high-altitude ecosystems teeming with diverse plant and animal life. They are vital for maintaining ecological balance, regulating water cycles, and providing habitats for many species, some of which are rare and unique. However, they face threats from deforestation, climate change, and unsustainable land use. Conservation efforts are essential to preserve these invaluable ecosystems and their crucial role in supporting biodiversity and ecosystem services globally.</p>    
+                </div>
+        
+            <div class="cont_img">
+                <img src="img/mountain1.jpg" alt="">
+            </div>        
+        </a>
+
+        <a href="content_3.html" class="content_3">
+            <div class="cont_img">
+                <img src="img/bio1.jpg" alt="">
+            </div>
+            <div>
+            <h2>Biodiversity</h2>
+            <p>Biodiversity is essential for the functioning of ecosystems, the provision of ecosystem services, and the sustainability
+                of life on Earth. Protecting and conserving biodiversity is crucial for maintaining a healthy environment and ensuring
+                the well-being of present and future generations.
+             </p>
+
+            </div>
+        </a>
+
+        <a href="content_4.html" class="content_4">
+            <div>
+                <h2>end desertification</h2>
+                <p>Restore. Revitalize. Rebalance. We can repair our landscapes, protect biodiversity, and battle desertification by implementing reforestation, sustainable agriculture, and environmentally conscious urban development. Let us work together to create a future in which humans and environment can coexist peacefully.</p>
+    
+            </div>
+        
+            <div class="cont_img">
+                <img src="img/desert1.jpg" alt="">
+            </div>        
+        </a>
+    </div>
+
+    <footer>
+        <div class="row">
+            <div class="clmn1">
+                <img src="img/images.jpg" alt="logo" class="logo_foot">
+                <p>The Life on Land is a private, not-for-profit organization. We work for the future generations.</p>
+                <div class="social_media">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <div class="clmn2">
+                <h3>NEWSLETTER</h3>
+                <form>
+                    <input type="email" placeholder="Your e-mail" required><br>
+                    <button type="submit" class="foot_submit">SUBSCRIBE</button>
+                </form>
+                <a href="feedback.html">Your Feedback</a>
+            </div>
+            
+            <div class="clmn3">
+                <h3>CONTACT</h3>
+                <i class="fa fa-location"></i>
+                <p>IIT school of computing,</p>
+                <p>Traverny place,</p>
+                <p>Colombo 05.</p>
+                <i class="fa fa-phone"></i>
+                <p>+94-768628048</p>
+                <a href="page_editor.html">page editor</a>
+            </div>
+            
+        </div>
+    </footer>
+
+   
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        let navBar = document.querySelector(".navbar");
+        var links = document.querySelectorAll(".link");
+        
+        links.forEach(element => {
+            if (element.getAttribute("href") === document.location.pathname) {
+                element.classList.add("active");
+            }
+            
+            element.addEventListener("click", () => {
+
+                links.forEach(link => {
+                    link.classList.remove("active");
+                });
+                element.classList.add("active");
+            });
+        });
+    });
+
+    const navbar = document.querySelector(".navbar");
+
+    document.addEventListener("scroll",()=>{
+        if (window.scrollY>40){
+            navbar.classList.add("scrolling");
+        }else{
+            navbar.classList.remove("scrolling");
+        }
+    })
+    
+</script>
+    
+</body>
+</html>

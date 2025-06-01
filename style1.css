@@ -1,0 +1,253 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+}
+
+.logo{
+    width: 10%;
+    height: 10%;
+    margin-top: 0;
+    display: Inline-block;
+    vertical-align: middle;
+}
+
+.logoWrapper{
+    background-color: #56C02B;
+    text-align: center;
+}
+
+.logoWrapper p{
+    color: white;
+    font-size: 0.5rem;
+}
+
+nav {
+    text-align: center;
+    background-color: #EBEBEB;
+    width: 100%;
+    position:fixed;
+    padding: 10px;
+    margin-top: auto;
+    display: inline-block;
+    transition: all 500ms ease;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.link {
+    position: relative;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 0.75rem; 
+    font-weight:bolder;
+    padding: 0.188rem 0.313rem;
+    letter-spacing: 0.125rem;
+}
+
+.link::after {
+    content: '';
+    position: absolute;
+    height: 0.188rem;
+    width: 0;
+    left: 0;
+    right: 0; 
+    bottom: 0;
+    background: #000000;
+    transition: width 0.5s;
+}
+
+.link:hover::after {
+    width: 100%;
+}
+
+.link.active{
+    color: #e11414;
+    padding: 3px;
+}
+
+nav.scrolling{
+    margin-top: -5.375rem;
+    background-color: #000000;
+    padding: 0.625rem;
+}
+nav.scrolling ul li a{
+    color: #ffffff;
+}
+
+.wlcmTxt{
+    padding: 15rem 0 0 10rem;
+    width: auto;
+    min-height: 53vh;
+    background: url(img/Picture1.png);
+    background-position: center;
+    background-size:cover;
+}
+
+.wlcmTxt p {
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.content_1{
+    display: grid;
+    height: 60vh;
+    grid-template-columns: repeat(2,1fr);
+    gap: 5rem; 
+    align-items: center; 
+    text-decoration: none;  
+    transition: ease-out 0.5s;
+}
+
+.content_2{
+    display: grid;
+    height: 60vh;
+    grid-template-columns: repeat(2,1fr);
+    gap: 5rem; 
+    padding-left: 5rem;
+    align-items: center;  
+    text-decoration: none;  
+    transition: ease-out 0.5s; 
+}
+
+.content_3{
+    display: grid;
+    height: 60vh;
+    grid-template-columns: repeat(2,1fr);
+    gap: 5rem; 
+    align-items: center;   
+    text-decoration: none;  
+    transition: ease-out 0.5s;
+}
+
+.content_4{
+    display: grid;
+    height: 60vh;
+    grid-template-columns: repeat(2,1fr);
+    gap: 5rem; 
+    padding-left: 5rem;
+    align-items: center;  
+    text-decoration: none;  
+    transition: ease-out 0.5s; 
+}
+
+.content_1:hover{
+    background-color: #56C02B;
+    color: #fff;
+    transition: ease-in 0.5s;
+}
+
+.content_2:hover{
+    background-color: #56C02B;
+    color: #fff;
+    transition: ease-in 0.5s;
+}
+.content_3:hover{
+    background-color: #56C02B;
+    color: #fff;
+    transition: ease-in 0.5s;
+}
+.content_4:hover{
+    background-color: #56C02B;
+    color: #fff;
+    transition: ease-in 0.5s;
+}
+.cont_img img{
+    width: 100%;
+    height: 60vh;    
+}
+
+.content h2{
+    font-weight: 800;
+    color: #56C02B;
+    text-transform: uppercase;
+    letter-spacing: 0.188rem;
+    margin-bottom: 1.563rem;
+}
+.content_1:hover h2,.content_2:hover h2,.content_3:hover h2,.content_4:hover h2{
+    color: #ffffff;
+    transition: ease-in 0.5s;
+} 
+
+.content a{
+    color: #000000;
+}
+
+footer{
+    width: 100%;
+    height: 35vh;
+    top: 100%;
+    bottom: 0;
+    padding: 3rem 0 3rem 0;
+    background: linear-gradient(to right,rgb(20, 57, 25),rgb(25, 141, 16));
+}
+
+.row{
+    color: #ffffff;
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.clmn1,.clmn2,.clmn3{
+    flex-basis: 25%;
+}
+
+.social_media{
+    margin-top: 1rem;
+}
+
+.social_media i{
+    font-size: 28px;
+    margin: 10px;
+    color: #ffffff;
+}
+
+.logo_foot{
+    width: 30%;
+    height: auto;
+    border-radius: 50%;
+}
+
+
+.clmn2 form input{
+    height: 2.5rem;
+    width: 20rem;
+    border-radius: 0.4rem;
+    text-align: center;
+    margin: 1.5rem;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.clmn2 form button{
+    background: transparent;
+    border: 0.1rem solid #ffffff;
+    color: #ffffff;
+    border-radius: 5rem;
+    padding: 0.625rem 2rem;
+    cursor: pointer;
+    margin-bottom: 2rem;
+}
+
+.clmn2 a{
+    
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 25px;
+    background-color: #000000;
+    color: #ffffff;
+}

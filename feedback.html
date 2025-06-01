@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life on land-Feedback</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="header">
+
+        <div class="logoWrapper">
+        <img src="img/logo2.jfif" alt="logo" class="logo">
+        <p>"Making the earth greener than yesterday"</p>
+        </div>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="home.html" class="link">HOME</a></li>
+                <li><a href="gallery.html" class="link">GALLERY</a></li>
+                <li><a href="shop.html" class="link">SHOP</a></li>
+                <li><a href="#" class="link">PROFILE</a></li>
+                <li><a href="#" class="link">ABOUT US</a></li>
+                <li><a href="#" class="link">SITEMAP</a></li>
+            </ul>
+        </nav>
+
+    </div>
+    <div class="container">
+        <form id="form">
+            <h1>Share your Feedback</h1>
+
+            <div>
+                <input type="text" id="name" placeholder="Your name">
+                
+            </div><span id="name_err"></span>
+            
+            <div>
+                <input type="email" id="email" placeholder="E-mail">
+            </div>
+            <span id="email_err"></span>
+
+            <div class="q1">
+            <label for="yes">Is this your first visit to our website ?&nbsp;&nbsp;&nbsp;</label>
+            <input type="radio" name="visit" id="yes" checked value="Yes">
+            <label for="yes" class="radio">YES</label>
+            <input type="radio" name="visit" id="no" value="No">
+            <label for="no" class="radio">NO</label>
+            </div>
+
+            <div class="q2">
+            <label for="yesexp">Did you find our website pleasant and informative ?&nbsp;&nbsp;&nbsp;</label>
+            <input type="radio" name="exp" id="yesexp" value="Yes" checked>
+            <label for="yesexp" class="radio">YES</label>
+            <input type="radio" name="exp" id="noexp" value="No">
+            <label for="noexp" class="radio">NO</label>
+            </div>
+
+            <div class="c1">
+                <label for="txtbox">Please provide us with any suggestions you may have.</label>
+                <textarea name="txtbox" id="txtbox" rows="5" cols="50"></textarea>
+
+            </div>
+
+            <div class="rating">
+                <label>How was our service</label><br>
+                <button class="star">&#9734;</button>
+                <button class="star">&#9734;</button>
+                <button class="star">&#9734;</button>
+                <button class="star">&#9734;</button>
+                <button class="star">&#9734;</button>
+            </div>
+
+            <div>
+                <input type="button" id="preview_button" value="Next">
+            </div>
+            
+        </form>
+
+        <div id = "preview_page" style="display: none;">
+            <div class="preview">
+                <h3>Preview of your data</h3>
+                <p>Name: <span id="name_preview"></span></p>
+                <p>Email: <span id="email_preview"></span></p>
+                <p>Comment: <span id="comment_preview"></span></p>
+                <p>Is this your first visit ? <span id="visit_preview"></span></p>
+                <p>Did you find our website pleasant and informative ? <span id="exp_preview"></span></p>
+                <p>Rating: <span id="rating_preview"></span></p>
+
+                
+            </div> 
+            <div>
+                <button id="button_back">back</button>
+                <input type="submit" id="preview_submit" value="submit">                
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="row">
+            <div class="clmn1">
+                <img src="img/images.jpg" alt="logo" class="logo_foot">
+                <p>The Life on Land is a private, not-for-profit organization. We work for the future generations.</p>
+                <div class="social_media">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <div class="clmn2">
+                <h3>NEWSLETTER</h3>
+                <form>
+                    <input type="email" placeholder="Your e-mail" required><br>
+                    <button type="submit" class="foot_submit">SUBSCRIBE</button>
+                </form>
+                <a href="feedback.html">Your Feedback</a>
+            </div>
+            
+            <div class="clmn3">
+                <h3>CONTACT</h3>
+                <i class="fa fa-location"></i>
+                <p>IIT school of computing,</p>
+                <p>Traverny place,</p>
+                <p>Colombo 05.</p>
+                <i class="fa fa-phone"></i>
+                <p>+94-768628048</p>
+                <a href="feedback.html">page editor</a>
+            </div>
+            
+        </div>
+    </footer>
+
+   
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        let navBar = document.querySelector(".navbar");
+        var links = document.querySelectorAll(".link");
+        
+        links.forEach(element => {
+            if (element.getAttribute("href") === document.location.pathname) {
+                element.classList.add("active");
+            }
+            
+            element.addEventListener("click", () => {
+
+                links.forEach(link => {
+                    link.classList.remove("active");
+                });
+                element.classList.add("active");
+            });
+        });
+    });
+
+    const navbar = document.querySelector(".navbar");
+
+    document.addEventListener("scroll",()=>{
+        if (window.scrollY>40){
+            navbar.classList.add("scrolling");
+        }else{
+            navbar.classList.remove("scrolling");
+        }
+    })
+    
+</script>
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>(function() {
+        const stars = document.querySelectorAll(".star");
+        let rating = 0; 
+        
+        stars.forEach((star, i) => {
+            star.addEventListener("click", function(event) {
+                event.preventDefault(); 
+                rating = i + 1; 
+                updateRating();
+            });
+        });
+        
+        function updateRating() {
+            stars.forEach((star, j) => {
+                if (j < rating) {
+                    star.classList.add("checked");
+                    star.innerHTML = "&#9733;";
+                } else {
+                    star.classList.remove("checked");
+                    star.innerHTML = "&#9734;";
+                }
+            });
+        }
+
+        let name = document.getElementById("name");
+        let email = document.getElementById("email");
+        let form = document.getElementById("form");
+        
+        let name_err = document.getElementById("name_err");
+        let email_err = document.getElementById("email_err");
+        var email_valid = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+       function validate_form(){
+        let validating = true;
+        name_err.innerHTML = "";
+        email_err.innerHTML = "";
+
+        if(name.value.trim()===""){
+            name_err.innerHTML = "Enter your name!";
+            validating = false;
+        }
+        if(!email.value.match(email_valid)){
+            email_err.innerHTML = "Enter a valid email!";
+            validating = false;
+        }
+        return validating
+       }
+
+        function preview(){
+            document.getElementById("name_preview").textContent = document.getElementById("name").value;
+            document.getElementById("email_preview").textContent = document.getElementById("email").value;
+            document.getElementById("comment_preview").textContent = document.getElementById("txtbox").value;
+            let radio_visit = document.querySelector("input[name='visit']:checked")
+            let radio_exp = document.querySelector("input[name='exp']:checked")
+            if (radio_visit) {
+                document.getElementById("visit_preview").textContent = radio_visit.nextElementSibling.textContent;
+            }
+            if (radio_exp) {
+                document.getElementById("exp_preview").textContent = radio_exp.nextElementSibling.textContent;
+            }
+            let rating_value = rating;
+            let rate_preview = "";
+            for (let i = 0; i < rating_value; i++){
+                rate_preview += "★";
+            }
+            for (let i = rating_value; i < 5; i++){
+                rate_preview += "☆";
+            }
+            document.getElementById("rating_preview").textContent = rate_preview;
+            console.log('Preview function called');
+
+        }
+        
+        function show_preview(){
+            document.getElementById("form").style.display = "none";
+            document.getElementById("preview_page").style.display = "block";
+        }
+
+        function send_email(){
+            preview();
+
+            var templateParams={
+                name: document.getElementById("name").value,
+                email: document.getElementById('email').value,
+                visit: document.querySelector('input[name="visit"]:checked').value,
+                exp: document.querySelector('input[name="exp"]:checked').value,
+                comment: document.getElementById('txtbox').value,
+                rating: document.querySelectorAll('.star.checked').length
+            };
+            
+            emailjs.send("service_yfnsn8j","template_mw48npc",templateParams)   
+                .then(function(response) {
+                    console.log('Email sent successfully!', response);
+                    alert('Email sent successfully!');
+                }, function(error) {
+                    console.error('Failed to send email. Error:', error);
+                    alert('Failed to send email. Please try again later.');
+            }); 
+            
+        }
+
+        document.getElementById("preview_button").addEventListener("click",function(){
+            if(!validate_form()){
+                return false;
+            }
+            preview();
+            show_preview();
+        });
+
+        document.getElementById("preview_submit").addEventListener("click", function() {
+            send_email();
+        })
+
+        document.getElementById("button_back").addEventListener("click",function(){
+            document.getElementById("preview_page").style.display = "none";
+            document.getElementById("form").style.display = "block";
+        })
+
+        emailjs.init('B0YDzde_jMWmMY5sg'); 
+    })();
+        
+    </script>
+    
+    
+</body>
+</html>

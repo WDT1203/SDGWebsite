@@ -1,0 +1,222 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+}
+.logo{
+    width: 10%;
+    height: 10%;
+    margin-top: 0;
+    display: Inline-block;
+    vertical-align: middle;
+}
+
+.logoWrapper{
+    background-color: #56C02B;
+    text-align: center;
+}
+
+.logoWrapper p{
+    color: white;
+    font-size: 0.5rem;
+}
+
+nav {
+    text-align: center;
+    background-color: #EBEBEB;
+    width: 100%;
+    position:fixed;
+    margin-top: auto;
+    display: inline-block;
+    transition: all 500ms ease;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.link {
+    position: relative;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 0.75rem; 
+    font-weight:bolder;
+    padding: 0.188rem 0.313rem;
+    letter-spacing: 0.125rem;
+}
+
+.link::after {
+    content: '';
+    position: absolute;
+    height: 0.188rem;
+    width: 0;
+    left: 0;
+    right: 0; 
+    bottom: 0;
+    background: #000000;
+    transition: width 0.5s;
+}
+
+.link:hover::after {
+    width: 100%;
+}
+
+.link.active{
+    color: #e11414;
+    padding: 3px;
+}
+
+nav.scrolling{
+    margin-top: -5.375rem;
+    background-color: #000000;
+    padding: 0.625rem;
+}
+nav.scrolling ul li a{
+    color: #ffffff;
+}
+
+.para_link{
+    margin-top: 3rem;
+    text-align: center;
+}
+.para_link a{
+    color: #000000;
+}
+.info{
+    background: linear-gradient(to right,rgb(96, 244, 116),rgb(236, 193, 108));
+    margin: 3rem 5rem 0 5rem;
+    display: grid;
+    height: auto;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+    align-items: center; 
+}
+
+.info img{
+    height: 45vh;
+    width: auto;
+}
+
+.para_1 .info p{
+    font-size: 1.15rem;
+    margin: 0;
+    padding-left: 1rem;
+}
+.para_1{
+    padding-top: 0;
+}
+h1{
+    padding-left: 3rem;
+    padding-top: 3rem;
+}
+h2{
+    padding-left: 5rem;
+    padding-top: 5rem;
+}
+.paras p{
+    margin: 4rem 15rem 2rem 15rem;
+    font-size: 1.15rem;
+}
+.para_2 img{
+    height: 50vh;
+    width: 100vh;
+}
+
+.human{
+    background: linear-gradient(to right,rgb(96, 244, 116),rgb(236, 193, 108));
+    margin: 5rem 5rem 0 5rem;
+    display: grid;
+    height: auto;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+    align-items: center; 
+}
+.para_2 .human p{
+    font-size: 1.15rem;
+    margin: 0;
+    padding-left: 1rem;
+}
+.sol_1,.sol_2,.sol_3{
+    text-align: center;
+}
+.sol_3 img{
+    height: auto;
+    width: 60%;
+}
+
+
+
+footer{
+    width: 100%;
+    height: 35vh;
+    top: 100%;
+    bottom: 0;
+    padding: 3rem 0 3rem 0;
+    background: linear-gradient(to right,rgb(20, 57, 25),rgb(25, 141, 16));
+}
+
+.row{
+    color: #ffffff;
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.clmn1,.clmn2,.clmn3{
+    flex-basis: 25%;
+}
+
+.social_media{
+    margin-top: 1rem;
+}
+
+.social_media i{
+    font-size: 28px;
+    margin: 10px;
+    color: #ffffff;
+}
+
+.logo_foot{
+    width: 30%;
+    height: auto;
+    border-radius: 50%;
+}
+
+
+.clmn2 form input{
+    height: 2.5rem;
+    width: 20rem;
+    border-radius: 0.4rem;
+    text-align: center;
+    margin: 1.5rem;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.clmn2 form button{
+    background: transparent;
+    border: 0.1rem solid #ffffff;
+    color: #ffffff;
+    border-radius: 5rem;
+    padding: 0.625rem 2rem;
+    cursor: pointer;
+    margin-bottom: 2rem;
+}
+
+.clmn2 a{
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 25px;
+    background-color: #000000;
+    color: #ffffff;
+}
+
